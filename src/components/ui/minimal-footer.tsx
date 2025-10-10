@@ -79,7 +79,7 @@ export function MinimalFooter() {
 					<div className="col-span-6 flex flex-col gap-5 md:col-span-4">
 						<a href="#hero" className="w-max">
 							<img 
-								src="./Guidebook/Branding/Logo 900x300.png" 
+								src="/Guidebook/Branding/Logo 900x300.png" 
 								alt="Bytamic Logo" 
 								className="h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
 							/>
