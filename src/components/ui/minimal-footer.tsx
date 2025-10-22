@@ -18,16 +18,12 @@ export function MinimalFooter() {
 			href: 'https://www.bytamic.com/',
 		},
 		{
-			title: 'About Us',
-			href: '#about',
+			title: 'Data Protection Policy',
+			href: 'https://www.bytamic.com/data-protection-policy/',
 		},
 		{
-			title: 'Contact',
-			href: '#contact',
-		},
-		{
-			title: 'Privacy Policy',
-			href: '#',
+			title: 'Terms of Service',
+			href: 'https://www.bytamic.com/terms-and-conditions/',
 		},
 	];
 
