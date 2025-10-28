@@ -11,5 +11,5 @@ Allow: /og-image.png
 User-agent: LinkedInBot
 Allow: /og-image.png
 
-Sitemap: https://support-aas.vercel.app/sitemap.xml
+Sitemap: https://support.bytamic.com/sitemap.xml
 
