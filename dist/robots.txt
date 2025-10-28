@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Explicitly allow social media crawlers to access OG image
+User-agent: Twitterbot
+Allow: /og-image.png
+
+User-agent: facebookexternalhit
+Allow: /og-image.png
+
+User-agent: LinkedInBot
+Allow: /og-image.png
+
+Sitemap: https://support-aas.vercel.app/sitemap.xml
+
