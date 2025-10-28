@@ -138,9 +138,9 @@ export function MinimalFooter() {
 				</div>
 				<div className="bg-primary/20 absolute inset-x-0 h-px w-full" />
 				<div className="flex max-w-7xl flex-col justify-between gap-2 pt-2 pb-5">
-					<p className="text-accent/70 text-center font-mono text-sm">
-						© {year} <a href="https://www.bytamic.ai/" className="hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">Bytamic</a>. All rights reserved.
-					</p>
+				<p className="text-accent/70 text-center font-mono text-sm">
+					© {year} <a href="https://www.bytamic.com/" className="hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">Bytamic</a>. All rights reserved.
+				</p>
 				</div>
 			</div>
 		</footer>

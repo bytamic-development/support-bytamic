@@ -54,12 +54,35 @@
         <div class="container px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 lg:h-20">
                 <!-- Logo -->
-                <a href="#hero" class="flex items-center space-x-3 hover:opacity-80 transition-opacity" aria-label="Support as a Service logo">
+                <div class="relative" id="logo-menu-container">
                     <img src="/src/assets/Logo 900x300.png" 
                          alt="Bytamic Logo" 
-                         class="h-8 sm:h-10 lg:h-12 w-auto object-contain"
-                         loading="eager">
-                </a>
+                         class="h-8 sm:h-10 lg:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity cursor-pointer"
+                         loading="eager"
+                         id="logo-image">
+                    <!-- Hover Menu -->
+                    <div id="logo-menu" class="hidden absolute left-0 top-full z-50 mt-2 w-64 rounded-lg bg-black/95 border border-primary/30 shadow-xl overflow-hidden backdrop-blur-sm">
+                        <div class="px-4 py-3 text-sm text-accent/70 cursor-default">
+                            <span class="text-primary font-bold font-mono">Support:</span> <span class="font-mono">you're here</span>
+                        </div>
+                        <a 
+                            href="https://bytamic.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="block px-4 py-3 text-sm text-accent hover:text-primary hover:bg-primary/5 transition-colors cursor-pointer border-t border-primary/20"
+                        >
+                            <span class="text-primary font-bold font-mono">COM:</span> <span class="font-mono">Go to bytamic.com</span>
+                        </a>
+                        <a 
+                            href="https://bytamic.ai" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="block px-4 py-3 text-sm text-accent hover:text-primary hover:bg-primary/5 transition-colors cursor-pointer border-t border-primary/20"
+                        >
+                            <span class="text-primary font-bold font-mono">AI:</span> <span class="font-mono">Go to bytamic.ai</span>
+                        </a>
+                    </div>
+                </div>
                 
                 <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
@@ -1068,6 +1091,30 @@
         });
 
         // Header background is now stable with solid black background
+
+        // Logo hover menu functionality
+        const logoContainer = document.getElementById('logo-menu-container');
+        const logoMenu = document.getElementById('logo-menu');
+        let hideMenuTimeout = null;
+        
+        if (logoContainer && logoMenu) {
+            logoContainer.addEventListener('mouseenter', () => {
+                // Clear any pending hide timeout
+                if (hideMenuTimeout) {
+                    clearTimeout(hideMenuTimeout);
+                    hideMenuTimeout = null;
+                }
+                logoMenu.classList.remove('hidden');
+            });
+            
+            logoContainer.addEventListener('mouseleave', () => {
+                // Add a small delay before hiding the menu
+                hideMenuTimeout = setTimeout(() => {
+                    logoMenu.classList.add('hidden');
+                    hideMenuTimeout = null;
+                }, 200); // 200ms delay
+            });
+        }
     </script>
     
     <!-- React Entry Point -->
